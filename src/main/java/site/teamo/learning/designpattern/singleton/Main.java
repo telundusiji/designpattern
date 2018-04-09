@@ -11,16 +11,16 @@ public class Main {
         //HungerSingleton
         HungerSingleton hungerSingleton1 = HungerSingleton.getInstance();
         HungerSingleton hungerSingleton2 = HungerSingleton.getInstance();
-        log.info("hungerSingleton1==hungerSingleton2:{}",hungerSingleton1.equals(hungerSingleton2));
+        log.info("hungerSingleton1==hungerSingleton2:{}",hungerSingleton1==hungerSingleton2);
 
         //LazySingletonTypeOne
         LazySingletonTypeOne lazySingletonTypeOne1 = LazySingletonTypeOne.getInstance();
         LazySingletonTypeOne lazySingletonTypeOne2 = LazySingletonTypeOne.getInstance();
-        log.info("lazySingletonTypeOne1==lazySingletonTypeOne2:{}",lazySingletonTypeOne1.equals(lazySingletonTypeOne2));
+        log.info("lazySingletonTypeOne1==lazySingletonTypeOne2:{}",lazySingletonTypeOne1==lazySingletonTypeOne2);
 
         //LazySingletonTypeTow
         LazySingletonTypeTow lazySingletonTypeTow1 = LazySingletonTypeTow.getInstance();
         LazySingletonTypeTow lazySingletonTypeTow2 = LazySingletonTypeTow.getInstance();
-        log.info("lazySingletonTypeTow1==lazySingletonTypeTow2:{}",lazySingletonTypeTow1.equals(lazySingletonTypeTow2));
+        log.info("lazySingletonTypeTow1==lazySingletonTypeTow2:{}",lazySingletonTypeTow1==lazySingletonTypeTow2);
     }
 }
