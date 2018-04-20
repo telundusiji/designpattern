@@ -1,0 +1,40 @@
+package site.teamo.learning.designpattern.state;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class StickyState implements ArticleState {
+
+    @Override
+    public void publish(Article article) {
+
+    }
+
+    @Override
+    public void ban(Article article) {
+        log.info("文章：{}----封禁成功！",article.getTitle());
+        article.setCurrentState(Article.banState);
+    }
+
+    @Override
+    public void pick(Article article) {
+
+    }
+
+    @Override
+    public void sticky(Article article) {
+
+    }
+
+    @Override
+    public void off(Article article) {
+        log.info("文章：{}----取消置顶成功！",article.getTitle());
+        article.setCurrentState(Article.normalState);
+    }
+
+    @Override
+    public void delete(Article article) {
+        log.info("文章：{}----删除成功！",article.getTitle());
+        article.setCurrentState(Article.deleteState);
+    }
+}
